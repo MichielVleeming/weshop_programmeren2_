@@ -15,9 +15,10 @@ class Product(models.Model):
         return self.product_name
 
 
+
 class Image(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to="assets/media", blank=True)
+    image = models.ImageField(upload_to="", blank=True)
     image_description = models.CharField(max_length=200)
 
     def __str__(self):
