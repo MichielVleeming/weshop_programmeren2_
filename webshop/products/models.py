@@ -17,7 +17,7 @@ class Product(models.Model):
 
 class Image(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    # TODO class Image
+    image = models.ImageField(upload_to="assets/media", blank=True)
     image_description = models.CharField(max_length=200)
 
     def __str__(self):
