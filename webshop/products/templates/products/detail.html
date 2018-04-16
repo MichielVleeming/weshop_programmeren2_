@@ -1,7 +1,15 @@
 {% load static %}
+{% load bootstrap4 %}
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
 <h1>{{ product.product_name }}</h1>
 <ul>
     <li>{{product.product_description}}</li>
-<img src="{% static "/media/IMG_1323.jpg" %}" height="300px">
+    <img src="../../media/{{ product.image }}" height="600px">
+    <p>&euro;{{ product.price }}</p>
+    <button type="button">Bestel!</button>
 </ul>

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, Http404
 from django.template import loader
 
-from .models import Product, Image
+from .models import Product
 
 
 # Create your views here.
@@ -16,8 +16,8 @@ def index(request):
 
 
 def detail(request, product_id):
-    try:
-        product = Product.objects.get(pk=product_id)
-    except Product.DoesNotExist:
-        raise Http404("Product does not exist")
-    return render(request, 'products/detail.html', {'product': product})
+    product = Product.objects.get(pk=product_id)
+    context = {
+        'product': product
+    }
+    return render(request, 'products/detail.html', context)

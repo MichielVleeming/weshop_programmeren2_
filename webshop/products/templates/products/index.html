@@ -1,9 +1,14 @@
+<ul>
+    <a href="../user/">Registreer!</a>
+</ul>
 {% if product_list %}
-    <ul>
+<ul>
     {% for product in product_list %}
+        <img src="../../media/{{ product.image }}" height="300px">
         <li><a href="/products/{{ product.id }}/">{{ product.product_name }}</a></li>
+        <p>&euro;{{ product.price }}</p>
     {% endfor %}
-    </ul>
+</ul>
 {% else %}
-    <p>No products are available.</p>
+<p>No products are available.</p>
 {% endif %}
