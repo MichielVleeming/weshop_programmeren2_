@@ -1,11 +1,7 @@
-{% load static %}
-{% load bootstrap4 %}
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
 
-{# Display django.contrib.messages as Bootstrap alerts #}
-{% bootstrap_messages %}
+{% extends '../base/base.html' %}
+{% load static %}
+{% block content %}
 <h1>{{ product.product_name }}</h1>
 <ul>
     <li>{{product.product_description}}</li>
@@ -13,3 +9,4 @@
     <p>&euro;{{ product.price }}</p>
     <button type="button">Bestel!</button>
 </ul>
+{% endblock %}
