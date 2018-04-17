@@ -1,17 +1,26 @@
 {% extends '../base/base.html' %}
-{% load static %}
 {% block content %}
-<h1>{{ product.product_name }}</h1>
-<ul>
-    <li>{{product.product_description}}</li>
-    <img src="../../media/{{ product.image }}" height="600px">
-    <p>&euro;{{ product.price }}</p>
-    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
-            data-target="#buy{{ product.pk }}">
-     <i class="fa fa-eye" aria-hidden="true">Bestel!</i>
-                                    
-    </button>
-    {% include "detail/product_buy_modals.html" %}
-</ul>
-
+<div class="page-header">
+    <h1>{{ product.product_name }}</h1>
+</div>
+<div class="product">
+    <body>
+    <ul>
+        <div class="detail-image">
+            <img src="../../media/{{ product.image }}" height="600px">
+        </div>
+        <div class="detail-description">
+            {{product.product_description}}
+        </div>
+        <div class="detail-price">
+            <p>&euro;{{ product.price }}</p>
+        </div>
+        <div class="detail-order">
+            <button type="button" class="btn btn-sm btn-primary">
+                    <i class="fa fa-eye" aria-hidden="true">Bestel!</i>
+            </button>
+        </div>
+    </ul>
+    </body>
+</div>
 {% endblock %}

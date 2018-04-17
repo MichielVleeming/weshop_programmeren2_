@@ -1,15 +1,17 @@
 {% extends '../base/base.html' %}
 {% block content %}
-<ul>
-    <a href="../user/">Registreer!</a>
-</ul>
 {% if product_list %}
 <ul>
-    {% for product in product_list %}
-        <img src="../../media/{{ product.image }}" height="300px">
-        <li><a href="/products/{{ product.id }}/">{{ product.product_name }}</a></li>
-        <p>&euro;{{ product.price }}</p>
-    {% endfor %}
+    <div class="index-standard">
+        {% for product in product_list %}
+
+        <div class="index-product">
+            <img src="../../media/{{ product.image }}" height="300px">
+            &euro;{{ product.price }}<br>
+            <a href="/products/{{ product.id }}/">{{ product.product_name }}</a>
+        </div>
+        {% endfor %}
+    </div>
 </ul>
 {% else %}
 <p>No products are available.</p>

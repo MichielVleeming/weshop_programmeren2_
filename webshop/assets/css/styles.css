@@ -1,0 +1,37 @@
+.banner {
+    background-color: #00ff99;
+}
+.home-button{
+    padding-left: 20px;
+}
+.register {
+    text-align: right;
+}
+.index-standard{
+    position: relative;
+    border: 3px solid green;
+}
+.index-product{
+
+}
+
+.product {
+    margin-bottom: 70px;
+}
+
+.product h1 a, .product h1 a:visited {
+    color: #000000;
+}
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    font-size: 36pt;
+    text-decoration: none;
+}
+h1 {
+    color: #FCA205;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Roboto', sans-serif;
+}
