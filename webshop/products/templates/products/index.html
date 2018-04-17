@@ -1,0 +1,19 @@
+{% extends '../base/base.html' %}
+{% block content %}
+{% if product_list %}
+<ul>
+    <div class="index-standard">
+        {% for product in product_list %}
+
+        <div class="index-product">
+            <a href="/products/{{ product.id }}/"><img src="../../media/{{ product.image }}" height="300px"></a>
+            &euro;{{ product.price }}<br>
+            <a href="/products/{{ product.id }}/">{{ product.product_name }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</ul>
+{% else %}
+<p>No products are available.</p>
+{% endif %}
+{% endblock %}

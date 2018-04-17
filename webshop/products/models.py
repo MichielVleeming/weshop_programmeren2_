@@ -7,18 +7,10 @@ from django.utils import timezone
 
 class Product(models.Model):
     product_name = models.CharField(max_length=200)
-    product_description = models.CharField(max_length=200)
+    product_description = models.CharField(max_length=10000)
     price = models.FloatField()
     pub_date = models.DateTimeField()
+    image = models.ImageField(upload_to="")
 
     def __str__(self):
         return self.product_name
-
-
-class Image(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    # TODO class Image
-    image_description = models.CharField(max_length=200)
-
-    def __str__(self):
-        return self.image_description

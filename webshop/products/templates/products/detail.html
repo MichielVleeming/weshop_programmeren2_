@@ -1,0 +1,24 @@
+{% extends '../base/base.html' %}
+{% block content %}
+<div class="page-header">
+    <h1>{{ product.product_name }}</h1>
+</div>
+<div class="product">
+    <body>
+    <ul>
+        <div class="detail-image">
+            <img src="../../media/{{ product.image }}">
+        </div>
+        <div class="detail-description">
+            {{product.product_description}}
+        </div>
+        <div class="detail-price">
+            <p>&euro;{{ product.price }}</p>
+        </div>
+        <div class="detail-order">
+            <a href="../order" class="btn btn-primary" role="button">Bestellen!</a>
+        </div>
+    </ul>
+    </body>
+</div>
+{% endblock %}
