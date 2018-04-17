@@ -7,7 +7,7 @@
     <body>
     <ul>
         <div class="detail-image">
-            <img src="../../media/{{ product.image }}" height="600px">
+            <img src="../../media/{{ product.image }}">
         </div>
         <div class="detail-description">
             {{product.product_description}}
@@ -16,9 +16,7 @@
             <p>&euro;{{ product.price }}</p>
         </div>
         <div class="detail-order">
-            <button type="button" class="btn btn-sm btn-primary">
-                    <i class="fa fa-eye" aria-hidden="true">Bestel!</i>
-            </button>
+            <a href="../order" class="btn btn-primary" role="button">Bestellen!</a>
         </div>
     </ul>
     </body>

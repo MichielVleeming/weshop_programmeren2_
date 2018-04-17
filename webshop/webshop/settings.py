@@ -33,7 +33,6 @@ MEDIA_URL = '/media/'
 
 INSTALLED_APPS = [
     'products.apps.ProductsConfig',
-    'user.apps.UserConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

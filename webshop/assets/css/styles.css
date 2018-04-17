@@ -7,12 +7,35 @@
 .register {
     text-align: right;
 }
-.index-standard{
-    position: relative;
-    border: 3px solid green;
+.page-header {
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+.product-form textarea, .post-form input {
+    width: 100%;
 }
 .index-product{
+    width: 33%;
+    height: 33%;
+    padding: 70px;
+    display: inline-block;
+}
+.detail-description {
+    width: 50%;
+}
 
+.detail-price{
+font-size: 50px;
+color: gray;
+}
+.detail-image{
+width: 50%;
+}
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
 }
 
 .product {
@@ -27,11 +50,14 @@
     text-decoration: none;
 }
 h1 {
-    color: #FCA205;
+    color: #3333cc;
     font-family: 'Roboto', sans-serif;
 }
 body {
     padding-left: 15px;
     padding-right: 15px;
     font-family: 'Roboto', sans-serif;
+}
+.mouse-order{
+    font-size: 50px;
 }

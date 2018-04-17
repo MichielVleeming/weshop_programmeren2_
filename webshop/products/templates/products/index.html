@@ -6,7 +6,7 @@
         {% for product in product_list %}
 
         <div class="index-product">
-            <img src="../../media/{{ product.image }}" height="300px">
+            <a href="/products/{{ product.id }}/"><img src="../../media/{{ product.image }}" height="300px"></a>
             &euro;{{ product.price }}<br>
             <a href="/products/{{ product.id }}/">{{ product.product_name }}</a>
         </div>
